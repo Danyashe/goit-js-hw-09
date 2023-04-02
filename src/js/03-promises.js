@@ -1,17 +1,16 @@
-import Notiflix from "notiflix";
+import Notiflix from 'notiflix';
 
-const formRef = document.querySelector(".form");
+const formRef = document.querySelector('.form');
 const amountRef = document.querySelector("[name = 'amount']");
 const delayRef = document.querySelector("[name = 'delay']");
 const stepRef = document.querySelector("[name = 'step']");
-const amount = Number(amountRef.value);
 let delay = Number(delayRef.value);
 const step = Number(stepRef.value);
 
-formRef.addEventListener("submit", activeCreatePromise);
+formRef.addEventListener('submit', activeCreatePromise);
 
 function activeCreatePromise(e) {
-  console.log("sadcsac");
+  const amount = Number(amountRef.value);
   e.preventDefault();
   for (let i = 1; i <= amount; i++) {
     if (i > 1) {
