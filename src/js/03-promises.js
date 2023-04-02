@@ -4,13 +4,13 @@ const formRef = document.querySelector('.form');
 const amountRef = document.querySelector("[name = 'amount']");
 const delayRef = document.querySelector("[name = 'delay']");
 const stepRef = document.querySelector("[name = 'step']");
-let delay = Number(delayRef.value);
-const step = Number(stepRef.value);
 
 formRef.addEventListener('submit', activeCreatePromise);
 
 function activeCreatePromise(e) {
+  let delay = Number(delayRef.value);
   const amount = Number(amountRef.value);
+  const step = Number(stepRef.value);
   e.preventDefault();
   for (let i = 1; i <= amount; i++) {
     if (i > 1) {
